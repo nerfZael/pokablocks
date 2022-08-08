@@ -1,0 +1,17 @@
+type Module {
+    metadata(id: BigInt!): WrapLinkJson
+    image(id: BigInt!): WrapLinkFile
+    animation(id: BigInt!): WrapLinkFile
+    battle(challengerId: BigInt!, defenderId: BigInt!): WrapLinkFile
+}
+
+type WrapLinkJson {
+    _wrap_link_type: String!
+    content: String!
+}
+
+type WrapLinkFile {
+    _wrap_link_type: String!
+    content: Bytes!
+    contentType: String!
+}

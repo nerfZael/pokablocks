@@ -1,0 +1,15 @@
+#import { Module } into WrapClient from "wrap://ens/wrap-client.eth"
+
+type Module {
+    index: Response
+}
+
+type Response {
+    headers: [Header!]
+    data: Bytes
+}
+
+type Header {
+    name: String!
+    value: String!
+}

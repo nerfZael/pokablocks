@@ -1,0 +1,20 @@
+[package]
+name = "pokablocks-site-wrapper"
+version = "0.1.0"
+description = "Wrapper for the Pokablocks NFT website"
+authors = ["Polywrap"]
+repository = "https://github.com/nerfZael/pokablocks"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+polywrap-wasm-rs = { version = "0.1.0" }
+serde = { version = "1.0", features = ["derive"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 's'
+lto = true
+panic = 'abort'

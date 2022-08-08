@@ -1,0 +1,23 @@
+[package]
+name = "pokablocks"
+version = "0.3.0"
+description = "Wrapper for Pokablocks NFTs"
+authors = ["nerfZael"]
+repository = "https://github.com/polywrap/monorepo"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+polywrap-wasm-rs = { version = "0.1.0" }
+serde = { version = "1.0", features = ["derive"] }
+gif = "0.11.4"
+serde_json = "1.0.82"
+rand_xoshiro = "0.6.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 's'
+lto = true
+panic = 'abort'
